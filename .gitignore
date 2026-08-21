@@ -1,0 +1,8 @@
+/.vs
+/Library
+/Logs
+/obj
+/Packages
+/Assembly-CSharp.csproj
+/Assembly-CSharp-Editor.csproj
+/XLuaFramework.sln
