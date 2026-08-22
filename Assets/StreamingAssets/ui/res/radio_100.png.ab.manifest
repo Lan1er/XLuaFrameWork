@@ -1,15 +1,17 @@
 ManifestFileVersion: 0
-CRC: 1373926885
+CRC: 6372176
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d5518c60d8d2424fda378fd18fd23dea
+    Hash: ef76f921ead15777ecb3df0a407f49c8
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
 HashAppended: 0
 ClassTypes:
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/BuildResources/UI/Res/radio_100.png

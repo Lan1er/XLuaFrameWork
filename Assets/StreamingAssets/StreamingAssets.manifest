@@ -1,19 +1,24 @@
 ManifestFileVersion: 0
-CRC: 2775684521
+CRC: 3686285053
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
+      Name: ui/prefabs/testui.prefab.ab
+      Dependencies:
+        Dependency_0: ui/res/background.png.ab
+        Dependency_1: ui/res/button_150.png.ab
+    Info_1:
       Name: ui/res/background.png.ab
       Dependencies: {}
-    Info_1:
+    Info_2:
       Name: ui/res/button_150.png.ab
       Dependencies: {}
-    Info_2:
+    Info_3:
       Name: ui/res/radio_100.png.ab
       Dependencies: {}
-    Info_3:
+    Info_4:
       Name: ui/res/slider_handle.png.ab
       Dependencies: {}
-    Info_4:
+    Info_5:
       Name: ui/res/universal_panel_40.png.ab
       Dependencies: {}
