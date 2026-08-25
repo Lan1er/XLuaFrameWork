@@ -18,7 +18,7 @@ public class ResourceManager : MonoBehaviour
     /// <summary>
     /// 解析版本文件
     /// </summary>
-    private void ParseVersionFile()
+    public void ParseVersionFile()
     {
         //版本文件路径
         string url = Path.Combine(PathUtil.BundleResourcePath,AppConst.FileListName);
@@ -105,18 +105,4 @@ public class ResourceManager : MonoBehaviour
         LoadAsset(PathUtil.GetScenePath(assetName), action);
     }
     //Tag:卸载暂时不做
-
-    void Start()
-    {
-        ParseVersionFile();
-        LoadUI("Login/LoginUI",OnComplete);
-    }
-
-    private void OnComplete(UObject obj)
-    {
-        GameObject go = Instantiate(obj) as GameObject;
-        go.transform.SetParent(this.transform);
-        go.SetActive(true);
-        go.transform.localPosition = Vector3.zero;
-    }
 }
