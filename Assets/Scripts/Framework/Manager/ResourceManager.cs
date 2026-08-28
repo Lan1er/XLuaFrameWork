@@ -77,7 +77,7 @@ public class ResourceManager : MonoBehaviour
     void EditorLoadAsset(string assetName,Action<UObject> action = null)
     {
         UObject obj = UnityEditor.AssetDatabase.LoadAssetAtPath(assetName,typeof(UObject));
-        if(obj != null) 
+        if(obj == null) 
             Debug.LogError("assets name is not exist:" + assetName);
         action?.Invoke(obj);
     }

@@ -1,4 +1,14 @@
+Manager = CS.Manager;
+local group = 
+{
+	"Main",
+	"UI",
+	"Box",
+}
+Manager.UI:SetUIGroup(group);
 function Main()
 	print("Hello Main");
+	Manager.UI:OpenUI("TestUI","UI","UI.TestUI")
+	Manager.UI:OpenUI("Login/LoginUI","Main","UI.TestUI")
 end
 --Main();
