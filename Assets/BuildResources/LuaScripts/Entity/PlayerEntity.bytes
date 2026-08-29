@@ -1,0 +1,19 @@
+function OnInit()
+	print("lua OnInit");
+end
+function OnShow()
+	print("lua OnOpen");
+	self.transform.localPosition = Vector3(0,2,0);
+end
+function Update()
+	print("lua Update");
+	if Input.GetKey(KeyCode.W) then
+		self.transform:Translate(self.transform.forward * Time.deltaTime * 5);
+	end
+	if Input.GetKey(KeyCode.S) then
+		self.transform:Translate(-self.transform.forward * Time.deltaTime * 5);
+	end
+end
+function OnHide()
+	print("lua OnClose");
+end

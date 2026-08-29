@@ -1,0 +1,17 @@
+function OnInit()
+	print("lua OnInit");
+end
+function OnActive()
+end
+function OnEnter()
+	print("lua OnOpen");
+	Manager.Entity:ShowEntity(PathUtil.GetModelPath("Player"),"Player","Entity.PlayerEntity");
+end
+function Update()
+	print("lua Update");
+end
+function OnInActive()
+end
+function OnQuit()
+	print("lua OnClose");
+end

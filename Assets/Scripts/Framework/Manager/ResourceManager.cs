@@ -62,7 +62,11 @@ public class ResourceManager : MonoBehaviour
 
         AssetBundleCreateRequest request = AssetBundle.LoadFromFileAsync(bundlePath);
         yield return request;
-
+        if(assetName.EndsWith(".unity"))
+        {
+            action?.Invoke(null);
+            yield break;
+        }
         AssetBundleRequest bundleRequest = request.assetBundle.LoadAssetAsync(assetName);
         yield return bundleRequest;
 
@@ -78,7 +82,7 @@ public class ResourceManager : MonoBehaviour
     {
         UObject obj = UnityEditor.AssetDatabase.LoadAssetAtPath(assetName,typeof(UObject));
         if(obj == null) 
-            Debug.LogError("assets name is not exist:" + assetName);
+            Debug.LogError("assets name is not exist:" + assetName); 
         action?.Invoke(obj);
     }
 #endif
@@ -112,6 +116,10 @@ public class ResourceManager : MonoBehaviour
         LoadAsset(PathUtil.GetScenePath(assetName), action);
     }
     public void LoadLua(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(assetName, action);
+    }
+    public void LoadPrefab(string assetName, Action<UObject> action = null)
     {
         LoadAsset(assetName, action);
     }
