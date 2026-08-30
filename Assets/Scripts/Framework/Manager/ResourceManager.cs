@@ -15,6 +15,8 @@ public class ResourceManager : MonoBehaviour
     }
     //存放bundle信息的集合
     private Dictionary<string,BundleInfo> m_BundleInfos = new Dictionary<string,BundleInfo>();
+    //存放bundle资源的集合
+    private Dictionary<string,AssetBundle> m_AssetBundles = new Dictionary<string,AssetBundle>();
     /// <summary>
     /// 解析版本文件
     /// </summary>
@@ -52,25 +54,40 @@ public class ResourceManager : MonoBehaviour
         string bundleName = m_BundleInfos[assetName].BundleName;
         string bundlePath = Path.Combine(PathUtil.BundleResourcePath,bundleName);
         List<string> dependences = m_BundleInfos[assetName].Dependences;
-        if(dependences != null && dependences.Count > 0)
+        AssetBundle bundle = GetBundle(bundleName);
+        if(bundle == null)
         {
-            for(int i = 0;i < dependences.Count;i++)
+            if (dependences != null && dependences.Count > 0)
             {
-                yield return LoadBundleAsync(dependences[i]);
+                for (int i = 0; i < dependences.Count; i++)
+                {
+                    yield return LoadBundleAsync(dependences[i]);
+                }
             }
-        }
 
-        AssetBundleCreateRequest request = AssetBundle.LoadFromFileAsync(bundlePath);
-        yield return request;
+            AssetBundleCreateRequest request = AssetBundle.LoadFromFileAsync(bundlePath);
+            yield return request;
+            bundle = request.assetBundle;
+            m_AssetBundles.Add(bundleName, bundle);
+        }
         if(assetName.EndsWith(".unity"))
         {
             action?.Invoke(null);
             yield break;
         }
-        AssetBundleRequest bundleRequest = request.assetBundle.LoadAssetAsync(assetName);
+        AssetBundleRequest bundleRequest = bundle.LoadAssetAsync(assetName);
         yield return bundleRequest;
 
         action?.Invoke(bundleRequest?.asset);
+    }
+    AssetBundle GetBundle(string name)
+    {
+        AssetBundle bundle = null;
+        if(m_AssetBundles.TryGetValue(name, out bundle))
+        {
+            return bundle;
+        }
+        return null;
     }
 #if UNITY_EDITOR
     /// <summary>

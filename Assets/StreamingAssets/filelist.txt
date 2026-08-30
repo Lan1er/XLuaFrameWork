@@ -1,3 +1,5 @@
+Assets/BuildResources/Audio/Music/dayu.mp3|audio/music/dayu.mp3.ab
+Assets/BuildResources/Audio/Sound/ui_touch.wav|audio/sound/ui_touch.wav.ab
 Assets/BuildResources/LuaScripts/Main.bytes|luascripts/main.bytes.ab
 Assets/BuildResources/LuaScripts/Entity/PlayerEntity.bytes|luascripts/entity/playerentity.bytes.ab
 Assets/BuildResources/LuaScripts/Scene/Scene01.bytes|luascripts/scene/scene01.bytes.ab

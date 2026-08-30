@@ -1,76 +1,82 @@
 ManifestFileVersion: 0
-CRC: 1135992123
+CRC: 2046318395
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: luascripts/main.bytes.ab
+      Name: audio/music/dayu.mp3.ab
       Dependencies: {}
     Info_1:
-      Name: luascripts/entity/playerentity.bytes.ab
+      Name: audio/sound/ui_touch.wav.ab
       Dependencies: {}
     Info_2:
-      Name: luascripts/scene/scene01.bytes.ab
+      Name: luascripts/main.bytes.ab
       Dependencies: {}
     Info_3:
-      Name: luascripts/scene/scene02.bytes.ab
+      Name: luascripts/entity/playerentity.bytes.ab
       Dependencies: {}
     Info_4:
-      Name: luascripts/ui/testui.bytes.ab
+      Name: luascripts/scene/scene01.bytes.ab
       Dependencies: {}
     Info_5:
-      Name: model/mat/player.mat.ab
+      Name: luascripts/scene/scene02.bytes.ab
       Dependencies: {}
     Info_6:
-      Name: model/mat/test01.mat.ab
+      Name: luascripts/ui/testui.bytes.ab
       Dependencies: {}
     Info_7:
-      Name: model/mat/test02.mat.ab
+      Name: model/mat/player.mat.ab
       Dependencies: {}
     Info_8:
+      Name: model/mat/test01.mat.ab
+      Dependencies: {}
+    Info_9:
+      Name: model/mat/test02.mat.ab
+      Dependencies: {}
+    Info_10:
       Name: model/prefabs/player.prefab.ab
       Dependencies:
         Dependency_0: model/mat/player.mat.ab
-    Info_9:
+    Info_11:
       Name: scenes/test01.unity.ab
       Dependencies:
         Dependency_0: model/mat/test01.mat.ab
-    Info_10:
+    Info_12:
       Name: scenes/test02.unity.ab
       Dependencies:
         Dependency_0: model/mat/test02.mat.ab
-    Info_11:
+    Info_13:
       Name: ui/prefabs/testui.prefab.ab
       Dependencies:
         Dependency_0: ui/res/background.png.ab
         Dependency_1: ui/res/button_150.png.ab
-    Info_12:
+    Info_14:
       Name: "ui/prefabs/\u4E00\u7EA7\u754C\u9762.prefab.ab"
       Dependencies:
         Dependency_0: ui/res/background.png.ab
         Dependency_1: ui/res/button_150.png.ab
-    Info_13:
+    Info_15:
       Name: "ui/prefabs/\u4E8C\u7EA7\u5F39\u7A97.prefab.ab"
       Dependencies: {}
-    Info_14:
+    Info_16:
       Name: "ui/prefabs/\u8DD1\u9A6C\u706F.prefab.ab"
       Dependencies: {}
-    Info_15:
+    Info_17:
       Name: ui/prefabs/login/loginui.prefab.ab
       Dependencies:
         Dependency_0: ui/res/background.png.ab
         Dependency_1: ui/res/slider_handle.png.ab
-    Info_16:
+    Info_18:
       Name: ui/res/background.png.ab
       Dependencies: {}
-    Info_17:
+    Info_19:
       Name: ui/res/button_150.png.ab
       Dependencies: {}
-    Info_18:
+    Info_20:
       Name: ui/res/radio_100.png.ab
       Dependencies: {}
-    Info_19:
+    Info_21:
       Name: ui/res/slider_handle.png.ab
       Dependencies: {}
-    Info_20:
+    Info_22:
       Name: ui/res/universal_panel_40.png.ab
       Dependencies: {}
