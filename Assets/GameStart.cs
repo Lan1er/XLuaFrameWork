@@ -19,7 +19,12 @@ public class GameStart : MonoBehaviour
         Manager.Lua.StartLua("Main");
         XLua.LuaFunction func = Manager.Lua.LuaEnv.Global.Get<XLua.LuaFunction>("Main");
         func.Call();
-    }
+
+        Manager.Pool.CreateGameObjectPool("UI", 10);
+        Manager.Pool.CreateGameObjectPool("Monster", 120);
+        Manager.Pool.CreateGameObjectPool("Effect", 120);
+        Manager.Pool.CreateAssetPool("AssetBundle", 10);
+    } 
     public void OnApplicationQuit()
     {
         Manager.Event.UnSubscribe(10000, OnLuaInit);

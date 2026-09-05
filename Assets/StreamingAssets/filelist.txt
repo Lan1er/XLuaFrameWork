@@ -15,7 +15,7 @@ Assets/BuildResources/UI/Prefabs/TestUI.prefab|ui/prefabs/testui.prefab.ab|Asset
 Assets/BuildResources/UI/Prefabs/一级界面.prefab|ui/prefabs/一级界面.prefab.ab|Assets/BuildResources/UI/Res/background.png|Assets/BuildResources/UI/Res/button_150.png
 Assets/BuildResources/UI/Prefabs/二级弹窗.prefab|ui/prefabs/二级弹窗.prefab.ab
 Assets/BuildResources/UI/Prefabs/跑马灯.prefab|ui/prefabs/跑马灯.prefab.ab
-Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab|ui/prefabs/login/loginui.prefab.ab|Assets/BuildResources/UI/Res/slider_handle.png|Assets/BuildResources/UI/Res/background.png
+Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab|ui/prefabs/login/loginui.prefab.ab|Assets/BuildResources/UI/Res/button_150.png
 Assets/BuildResources/UI/Res/background.png|ui/res/background.png.ab
 Assets/BuildResources/UI/Res/button_150.png|ui/res/button_150.png.ab
 Assets/BuildResources/UI/Res/radio_100.png|ui/res/radio_100.png.ab
